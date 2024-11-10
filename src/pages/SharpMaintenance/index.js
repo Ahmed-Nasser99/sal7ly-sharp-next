@@ -148,10 +148,10 @@ const SharpMaintenance = () => {
             </Typography>
             <List className="mt-4 text-xl text-gray-700 list-disc list-inside">
               <ListItem>صيانة تكييف شارب</ListItem>
-              <ListItem>صيانة ثلاجات شارب | اتصل بنا الآن 01062000763</ListItem>
-              <ListItem>صيانة غسالات شارب | اتصل الآن 01062000763</ListItem>
-              <ListItem>صيانة شاشات شارب | اتصل الآن 01062000763</ListItem>
-              <ListItem>عيوب شاشات شارب | اتصل بنا الآن 01062000763</ListItem>
+              <ListItem>صيانة ثلاجات شارب | اتصل بنا الآن 01102941029</ListItem>
+              <ListItem>صيانة غسالات شارب | اتصل الآن 01102941029</ListItem>
+              <ListItem>صيانة شاشات شارب | اتصل الآن 01102941029</ListItem>
+              <ListItem>عيوب شاشات شارب | اتصل بنا الآن 01102941029</ListItem>
             </List>
             <Typography variant="body1" className="mt-4 text-xl text-gray-700">
               للحصول على المزيد من المعلومات حول الخدمات المقدمة، يمكنك الاتصال

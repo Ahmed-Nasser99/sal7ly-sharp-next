@@ -12,6 +12,11 @@ import {
   Typography,
   Avatar,
   CardMedia,
+  Container,
+  Box,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
 import Link from "next/link";
 import {
@@ -28,9 +33,9 @@ import { testimonialsData } from "../components/Testimonials";
 import BrandsSwiper from "@/components/BrandsSwiper";
 import TestimonialsSwiper from "@/components/TestimonialsSwiper";
 import ServicesSwiper from "@/components/ServicesSwiper";
-import arValues from "../../public/locales/ar/translation.json";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
+import arValues from "../../public/locales/ar/translation.json";
 
 const t = (key) => {
   return arValues[key] || key; // Return the Arabic value or the key if not found
@@ -38,8 +43,6 @@ const t = (key) => {
 export default function MainComponent() {
   const phoneNumber = "+201102941029";
   const displayPhoneNumber = "01102941029";
-  const email = "ahmednasserr86@gmail.com";
-  const location = "٢ شارع اليمني - أرض اللواء - حي العجوزة - محافظة الجيزة";
 
   return (
     <>
@@ -49,7 +52,7 @@ export default function MainComponent() {
         <link
           rel="icon"
           type="image/svg+xml"
-          href="/assets/Imgs/Logo.png"
+          href="/assets/Imgs/Sharp/logoSharp.png"
           width="30"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,245 +66,206 @@ export default function MainComponent() {
         <title>صيانة شارب - خدمات الصيانة الموثوقة لأجهزة شارب في مصر</title>
         <meta
           name="description"
-          content="خدمات صيانة موثوقة لجميع أجهزة شارب في مصر. نقدم صيانة للثلاجات والتكييفات والغسالات بأيدي خبراء متخصصين. اتصل بنا على 01102941029."
+          content="خدمات صيانة موثوقة لجميع أجهزة شارب في مصر. نقدم صيانة للثلاجات والتكييفات والغسالات بأيدي خبراء متخصصين. اتصل بنا على 19319."
         />
         <meta
           name="keywords"
           content="صيانة شارب, صيانة ثلاجات شارب, صيانة تكييف شارب, صيانة غسالات شارب, رقم صيانة شارب"
         />
       </Head>
-      <div className="flex flex-col min-h-screen">
-        <Navbar
-          logo={logo}
-          logoTitle={"صلحلي_sal7ly"}
-          PhoneNmberTitle="الخط الساخن للصيانة المنزلية"
-          whatsAppTitle="رقم الواتساب للصيانة المنزلية"
-        />
-        <section className="w-full py-16 md:pt-10 md:pb-6 lg:pt-16 lg:pb-8 h-screen">
-          <div className="container mx-auto px-2 md:px-4 grid gap-3 lg:grid-cols-2 xl:grid-cols-2 w-full h-full">
+      <Navbar
+        logo="/assets/Imgs/Sharp/logoSharp.png"
+        logoTitle="صيانة شارب"
+        PhoneNmberTitle="رقم صيانة شارب"
+        whatsAppTitle="هاتف صيانة شارب"
+      />
+      <section className="w-full py-16 md:pt-10 md:pb-6 lg:pt-16 lg:pb-8 h-screen">
+        <Container className="relative mx-auto h-full">
+          <Box className="relative w-full h-full mx-auto aspect-video overflow-hidden rounded-xl lg:aspect-square bg-gray-400">
             <Image
-              src={homeBackground}
-              alt="صيانة جميع الاجهزة الكهربائة"
-              width
-              height={500}
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-bottom sm:w-full lg:order-last lg:aspect-square bg-gray-400 h-full"
+              src="/assets/Imgs/Sharp/sharpBg.jpg"
+              alt="صيانة شارب"
+              layout="fill"
+              className="object-cover"
             />
-            <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
-                <Typography
-                  variant="h1"
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl"
-                >
-                  {t("main_title")}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="max-w-[600px] text-muted-foreground md:text-xl"
-                >
-                  {t("main_description")}
-                </Typography>
-              </div>
-              <div className="flex flex-col justify-center gap-2 sm:flex-row">
-                <Button
-                  variant="contained"
-                  color="success"
-                  startIcon={<LocalPhoneIcon className="mx-2" />}
-                  component="a"
-                  href={`tel:${phoneNumber}`}
-                >
-                  {t("call_us")}
-                </Button>
-                <Button
-                  variant="outlined"
-                  startIcon={<WhatsApp className="text-green-500 mx-2" />}
-                  component="a"
-                  href={`https://wa.me/${phoneNumber}`}
-                >
-                  {t("whatsapp")}
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+            <Box className="absolute inset-0 bg-[#0003]" />
+          </Box>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 max-w-[95vw] mx-auto">
-          <div className="container mx-auto px-4 md:px-6 space-y-12">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <Typography
-                  variant="h2"
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl"
-                >
-                  {t("our_services")}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-muted-foreground md:text-xl lg:text-base xl:text-xl"
-                >
-                  {t("services_description")}
-                </Typography>
-              </div>
-            </div>
-            <ServicesSwiper />
-          </div>
-        </section>
-
-        <section className="w-full py-12 md:py-24 lg:py-32 max-w-[95vw] mx-auto">
-          <div className="container mx-auto px-4 md:px-6 space-y-12">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <Typography
-                  variant="h2"
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl"
-                >
-                  {t("trusted_brands")}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-muted-foreground md:text-xl lg:text-base xl:text-xl"
-                >
-                  {t("brands_description")}
-                </Typography>
-              </div>
-            </div>
-            <BrandsSwiper />
-          </div>
-        </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 max-w-[95vw] mx-auto">
-          <div className="container mx-auto px-4 md:px-6 space-y-12">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <Typography
-                  variant="h2"
-                  className="text-3xl font-bold tracking-tighter sm:text-5xl"
-                >
-                  {t("customer_feedback")}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  className="text-muted-foreground md:text-xl lg:text-base xl:text-xl"
-                >
-                  {t("feedback_description")}
-                </Typography>
-              </div>
-            </div>
-            <TestimonialsSwiper />
-          </div>
-        </section>
-        <section className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
-          <div className="my-5">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              {t("contact_us")}
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-[95vw] overflow-hidden">
-            <div className="flex justify-center lg:justify-start">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d693.8995184123253!2d31.17989613369147!3d30.059597478605692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1722352321125!5m2!1sar!2seg"
-                width="100%"
-                height="400"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-                  <LocalPhoneIcon
-                    style={{ width: "2rem", height: "2rem" }}
-                    className="text-green-500"
-                  />
-                  <Typography variant="h6" className="text-lg font-bold">
-                    {t("contact_us")}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    className="text-muted-foreground text-center"
-                  >
-                    <a href={`tel:${phoneNumber}`} className="font-bold">
-                      {displayPhoneNumber}
-                    </a>
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-                  <Email
-                    style={{ width: "2rem", height: "2rem" }}
-                    className="text-[#09c]"
-                  />
-                  <Typography variant="h6" className="text-lg font-bold">
-                    {t("email_us")}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    className="text-muted-foreground text-center"
-                  >
-                    <a href={`mailto:${email}`} className="font-bold">
-                      {email}
-                    </a>
-                  </Typography>
-                </CardContent>
-              </Card>
-              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-                  <WhatsApp
-                    style={{ width: "2rem", height: "2rem" }}
-                    className="text-green-500"
-                  />
-                  <Typography variant="h6" className="text-lg font-bold">
-                    {t("whatsapp")}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    className="text-muted-foreground text-center"
-                  >
-                    <a
-                      href={`https://wa.me/${phoneNumber}`}
-                      className="font-bold"
-                    >
-                      {displayPhoneNumber}
-                    </a>
-                  </Typography>
-                </CardContent>
-              </Card>
-              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <CardContent className="flex flex-col items-center justify-center gap-4 p-6">
-                  <LocationCity
-                    style={{ width: "2rem", height: "2rem" }}
-                    className="text-[#09c]"
-                  />
-                  <Typography variant="h6" className="text-lg font-bold">
-                    {t("our_location")}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    className="text-muted-foreground text-center"
-                  >
-                    <a
-                      href={`https://maps.app.goo.gl/t6ogR3DfGoEo459i7`}
-                      className="font-bold"
-                    >
-                      {location}
-                    </a>
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        <footer className="w-full py-4 bg-gray-800 text-white">
-          <div className="container mx-auto px-4 md:px-6">
-            <Typography variant="body2" className="text-center">
-              © {new Date().getFullYear()} {t("company_name")}.{" "}
-              {t("all_rights_reserved")}.
+          <Box className="absolute inset-0 flex flex-col items-center justify-center text-center text-white space-y-4">
+            <Typography
+              variant="h1"
+              className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl"
+              style={{ letterSpacing: "2px" }}
+            >
+              صيانة أعطال شارب فى مصر
             </Typography>
-          </div>
-        </footer>
-      </div>
+            <Typography
+              variant="body1"
+              className="text-muted-foreground md:text-xl"
+            >
+              نقدم خدمات صيانة متميزة لجميع أجهزة شارب، بما في ذلك الثلاجات
+              والتكييفات والغسالات. فريقنا من الخبراء مستعد لحل جميع مشاكل
+              أجهزتكم بكفاءة عالية.
+            </Typography>
+            <Box className="flex flex-col justify-center gap-2 sm:flex-row">
+              <Button
+                variant="contained"
+                color="success"
+                startIcon={<LocalPhoneIcon />}
+                component="a"
+                href={`tel:${phoneNumber}`}
+              >
+                {t("call_us")}
+              </Button>
+              <Button
+                variant="outlined"
+                startIcon={<WhatsApp className="text-green-500" />}
+                component="a"
+                href={`https://wa.me/${phoneNumber}`}
+              >
+                {t("whatsapp")}
+              </Button>
+            </Box>
+          </Box>
+        </Container>
+      </section>
+      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+        <Container className="grid max-w-7xl mx-auto gap-y-16 lg:grid-cols-2 lg:gap-x-8 lg:items-start my-3">
+          <Box className="lg:pr-4">
+            <Box className="lg:max-w-lg">
+              <Typography
+                variant="h6"
+                color="primary"
+                className="font-semibold"
+              >
+                صيانة شارب
+              </Typography>
+              <Typography
+                variant="h2"
+                className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                خدمة عملاء شارب
+              </Typography>
+              <Typography
+                variant="body1"
+                className="mt-6 text-xl text-gray-700"
+              >
+                خدمة عملاء شارب متوفرة على مدار 24 ساعة لتلقي بلاغات الأعطال
+                ولتقديم خدمة متميزة لصيانة تكييف شارب بالضمان المعتمد.
+              </Typography>
+              <List className="mt-6 text-xl text-gray-700 list-disc list-inside">
+                <ListItem>توفير قطع غيار أصلية بضمان لمدة 12 شهر.</ListItem>
+                <ListItem>
+                  أسعار تنافسية وخصم 20% على قطع الغيار الأصلية.
+                </ListItem>
+                <ListItem>
+                  خدمات فورية لتركيب وصيانة تكييفات شارب بالضمان المعتمد.
+                </ListItem>
+              </List>
+              <Typography
+                variant="body1"
+                className="mt-6 text-xl text-gray-700"
+              >
+                رقم توكيل صيانة شارب العربي 01062000763 الخط الساخن المباشر.
+              </Typography>
+            </Box>
+          </Box>
+
+          <Box className="lg:pr-4 lg:max-w-lg">
+            <Typography
+              variant="body1"
+              className="text-base leading-7 text-gray-700"
+            >
+              <strong>الخدمات:</strong>
+            </Typography>
+            <List className="mt-4 text-xl text-gray-700 list-disc list-inside">
+              <ListItem>صيانة تكييف شارب</ListItem>
+              <ListItem>صيانة ثلاجات شارب | اتصل بنا الآن 01102941029</ListItem>
+              <ListItem>صيانة غسالات شارب | اتصل الآن 01102941029</ListItem>
+              <ListItem>صيانة شاشات شارب | اتصل الآن 01102941029</ListItem>
+              <ListItem>عيوب شاشات شارب | اتصل بنا الآن 01102941029</ListItem>
+            </List>
+            <Typography variant="body1" className="mt-4 text-xl text-gray-700">
+              للحصول على المزيد من المعلومات حول الخدمات المقدمة، يمكنك الاتصال
+              بأرقام صيانة شارب الموجودة في المقال.
+            </Typography>
+          </Box>
+        </Container>
+      </section>
+      <main className="bg-gray-50 py-16 md:py-24">
+        <Container maxWidth="lg">
+          <Typography
+            variant="h1"
+            component="h1"
+            className="text-4xl font-bold text-center mb-8"
+          >
+            صيانة أعطال شارب فى مصر
+          </Typography>
+
+          <Box className="bg-white shadow-lg rounded-lg p-8 mb-8">
+            <Typography variant="h2" className="text-2xl font-semibold mb-4">
+              أفضل خدمات صيانة شارب في مصر
+            </Typography>
+            <Typography variant="body1" className="text-right mb-4">
+              نقدم خدمات صيانة متميزة لجميع أجهزة شارب، بما في ذلك الثلاجات
+              والتكييفات والغسالات. فريقنا من الخبراء مستعد لحل جميع مشاكل
+              أجهزتكم بكفاءة عالية.
+            </Typography>
+          </Box>
+
+          <Box className="bg-white shadow-lg rounded-lg p-8 mb-8">
+            <Typography variant="h2" className="text-2xl font-semibold mb-4">
+              خدماتنا
+            </Typography>
+            <List>
+              <ListItem>
+                <ListItemText
+                  primary="صيانة شارب ثلاجات"
+                  secondary="إصلاح جميع أنواع الأعطال في ثلاجات شارب"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="صيانة شارب تكييف"
+                  secondary="صيانة وإصلاح تكييفات شارب بجميع أنواعها"
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  primary="صيانة شارب غسالات"
+                  secondary="حلول متكاملة لجميع مشاكل غسالات شارب"
+                />
+              </ListItem>
+            </List>
+          </Box>
+
+          <Box className="bg-white shadow-lg rounded-lg p-8">
+            <Typography variant="h2" className="text-2xl font-semibold mb-4">
+              تواصل معنا
+            </Typography>
+            <Typography variant="body1" className="mb-2">
+              رقم الخط الساخن:{" "}
+              <a
+                href={`tel:+201102941029`}
+                title={"رقم صيانة شارب"}
+                className="text-blue-600 hover:underline"
+              >
+                19319
+              </a>
+            </Typography>
+            <Typography variant="body1" className="mb-2">
+              رقم صيانة شارب:{" "}
+              <a
+                href={`tel:+201102941029`}
+                title={"رقم صيانة شارب"}
+                className="text-blue-600 hover:underline"
+              >
+                {displayPhoneNumber}
+              </a>
+            </Typography>
+          </Box>
+        </Container>
+      </main>
     </>
   );
 }
