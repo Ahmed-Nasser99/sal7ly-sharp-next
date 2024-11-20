@@ -354,8 +354,8 @@ export default function MainComponent() {
               </a>{" "}
               ايضا هى من طابع خاص ما يهمنا هو رضاء ع
               <a
-                style="color: #000000;"
-                href="https://sharp.maintenance-agent.com/"
+                style={{ color: "#000000" }}
+                href="https://sharp-maintenance.vercel.app/"
               >
                 ميل شركة شارب
               </a>{" "}
