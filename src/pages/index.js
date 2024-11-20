@@ -72,6 +72,40 @@ export default function MainComponent() {
           name="keywords"
           content="صيانة شارب, صيانة ثلاجات شارب, صيانة تكييف شارب, صيانة غسالات شارب, رقم صيانة شارب"
         />
+        {/* Twitter Card */}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@elarabygroup64" />
+        <meta name="twitter:creator" content="@elarabygroup64" />
+        <meta
+          name="twitter:title"
+          content="صيانة أعطال شارب فى مصر | العربى جروب"
+        />
+        <meta
+          name="twitter:url"
+          content="https://sharp-maintenance.vercel.app/"
+        />
+        <meta
+          name="twitter:description"
+          content="مرحباً بكم مع خدمة صيانة شارب من العربى جروب ✓ هل لديك بعض أعطال فى منتجات أو أجهزة منزلية شارب تحتاج الدعم الفنى أو مراكز صيانة شارب العربى."
+        />
+        <meta name="twitter:image" content="/assets/Imgs/Sharp/logoSharp.png" />
+
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://sharp-maintenance.vercel.app/"
+        />
+        <meta
+          property="og:title"
+          content="صيانة أعطال شارب فى مصر | العربى جروب"
+        />
+        <meta
+          property="og:description"
+          content="مرحباً بكم مع خدمة صيانة شارب من العربى جروب ✓ هل لديك بعض أعطال فى منتجات أو أجهزة منزلية شارب تحتاج الدعم الفنى أو مراكز صيانة شارب العربى."
+        />
+        <meta property="og:image" content="/assets/Imgs/Sharp/logoSharp.png" />
+        <meta property="og:site_name" content="صيانة شارب" />
       </Head>
       <Navbar
         logo="/assets/Imgs/Sharp/logoSharp.png"
@@ -134,14 +168,14 @@ export default function MainComponent() {
           <Box className="lg:pr-4">
             <Box className="lg:max-w-lg">
               <Typography
-                variant="h6"
+                variant="h1"
                 color="primary"
                 className="font-semibold"
               >
                 صيانة شارب
               </Typography>
               <Typography
-                variant="h2"
+                variant="h1"
                 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
               >
                 خدمة عملاء شارب
@@ -254,6 +288,80 @@ export default function MainComponent() {
           فاقوس – توكيل شارب الزقازيق – منيا القمح – بلبيس – الحوامدية – العياط
           – البدرشين – مدينة العاشر من رمضان – البحر الاحمر – مركز صيانة شارب
           بكفر الزيات –
+        </p>
+      </section>
+      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+        <h1 style={{ textAlign: "center" }}>
+          <span style={{ color: "#ff0000" }}>
+            رقم صيانة شارب الخط الساخن{" "}
+            <span
+              style={{
+                fontFamily: "arial, helvetica, sans-serif; font-size: 24pt",
+              }}
+            >
+              <span style={{ color: "#008000" }}>19078</span>{" "}
+            </span>
+            خدمة عملاء صيانة شارب مصر Shap Egypt
+          </span>
+        </h1>
+        <p>
+          <span style={{ color: "#000000" }}>
+            <strong>
+              تعرف على عناويين وارقام صيانة شارب بمصرنحن{" "}
+              <a
+                style={{ color: "#000000" }}
+                href="https://sharp-maintenance.vercel.app/"
+              >
+                مركز صيانة شارب
+              </a>{" "}
+              نعمل على مدار الساعه من اجل خدمة عملاء شركة شارب ولان شركة شارب
+              تعتبر من اعرق الشركات المتخصصة فى انتاج الاجهزة المنزلية والتى
+              لاقت نجاح كبير فى العالم خصوصا بمصر فقد وجب عليها ان تنتقى مراكز
+              الصيانة والتى ستقوم بصيانة اجهزة شارب لذلك فقط اعطتنا نحن مركز
+              صيانة شارب المعتمد من شركة شارب شرف صيانة اجهزة شارب فنحن نعمل على
+              مدار الساعه من اجلك انت عميل صيانة شارب ، فبمجرد اتصالك ب{" "}
+              <a
+                style={{ color: "#000000" }}
+                href="https://sharp-maintenance.vercel.app"
+              >
+                خدمة عملاء صيانة شارب
+              </a>{" "}
+              المعتمد والتى يمكنك ان تتصل بها فى اى وقت لانها تعمل على مدار
+              الساعه ،فانها تقوم بتسليمك الى المهندس المتخصص والذى يقوم بدورة
+              بالاتصال بك لتحديد ميعاد للتواصل معك ، ولاننا نملك اكبر اسطول
+              سيارات خاص بمراكز صيانة شارب ومراكزنا تملاء جميع محافظات ومراكز
+              جمهورية مصر العربية فاننا نصلك فى اسرع وقت ممكن ، ولاننا مركز
+              صيانة شارب المعتمد فقد وجب علينا ان نحذر من المراكز الغير معتمدة
+              من
+            </strong>
+            <strong>&nbsp;شركة شارب</strong>
+            <strong>&nbsp;</strong>
+            <strong>
+              والتى كثرت فى الاونة الاخير بشدة وانتحلت صفة مركز صيانة شارب
+              وبالتالى فاننا نخلى مسؤليتنا نحن مركز صيانة شارب من هذة المراكز
+              الغير معتمدة من شركة شارب ، واخير نود ان نشير الى ان هدفنا ورؤيتنا
+              هى ارضاء عميل شارب فنحن نعمل على مدار الساعه من اجل ان تنعم انت
+              واسرتك بافضل خدمة من مركز صيانة شارب ، اخى عميل شارب يمكنك ان تتصل
+              بنا نحن توكيل صيانة شارب فى اى وقت على الخط الساخن لصيانة شارب
+              نقوم بصيانة ثلاجات شارب وصيانة بوتجازات شارب وصيانة تكييفات شارب
+              وصيانة غسالات شارب والاننا نعلم ان شركة شارب العربي لها عميل من
+              طابع خاص فان{" "}
+              <a
+                style={{ color: "#000000" }}
+                href="https://sharp-maintenance.vercel.app/"
+              >
+                مراكز صيانة شارب
+              </a>{" "}
+              ايضا هى من طابع خاص ما يهمنا هو رضاء ع
+              <a
+                style="color: #000000;"
+                href="https://sharp.maintenance-agent.com/"
+              >
+                ميل شركة شارب
+              </a>{" "}
+              والعالمية
+            </strong>
+          </span>
         </p>
       </section>
       <main className="bg-gray-50 py-16 md:py-24">
