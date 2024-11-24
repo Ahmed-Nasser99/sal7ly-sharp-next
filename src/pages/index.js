@@ -364,6 +364,83 @@ export default function MainComponent() {
           </span>
         </p>
       </section>
+      {/* Section To Target "خدمة عملاء شارب للغسالات" Keyword */}
+      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+        <header className="bg-blue-600 text-white py-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-3xl font-bold">خدمة عملاء شارب للغسالات</h1>
+            <p className="text-lg mt-2">الدعم الفني والصيانة لمساعدتك دائمًا</p>
+          </div>
+        </header>
+        <main className="container mx-auto p-6">
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">
+              ما هي خدمة عملاء شارب للغسالات؟
+            </h2>
+            <p className="text-lg leading-7">
+              تعد خدمة عملاء شارب للغسالات واحدة من أفضل خدمات الدعم الفني في
+              السوق. تقدم هذه الخدمة حلولاً مبتكرة وسريعة لمشاكل الغسالات، سواء
+              كانت تتعلق بالصيانة أو الاستخدام اليومي.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">
+              أهم مميزات خدمة عملاء شارب
+            </h2>
+            <ul className="list-disc pl-6 space-y-2 text-lg">
+              <li>دعم فني متاح على مدار الساعة لحل جميع مشاكلك.</li>
+              <li>فريق عمل مدرب ومتخصص في صيانة غسالات شارب.</li>
+              <li>ضمان استخدام قطع غيار أصلية للحصول على أفضل أداء.</li>
+              <li>تقديم نصائح وإرشادات لتحسين أداء الغسالة.</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">
+              كيفية التواصل مع خدمة عملاء شارب
+            </h2>
+            <p className="text-lg">
+              للتواصل مع خدمة العملاء، يمكنك الاتصال على الرقم المخصص أو زيارة
+              الموقع الرسمي للحصول على المزيد من التفاصيل. فريق الدعم الفني جاهز
+              للإجابة على جميع استفساراتك.
+            </p>
+            <div className="bg-blue-100 p-4 rounded mt-4">
+              <p className="text-lg font-medium">
+                رقم خدمة العملاء:{" "}
+                <span className="text-blue-600 font-bold">+201102941029</span>
+              </p>
+              <a
+                href="https://sharp-maintenance.vercel.app/"
+                className="text-blue-500 underline mt-2 block"
+              >
+                زيارة الموقع الرسمي
+              </a>
+            </div>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold mb-4">أسئلة شائعة</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold">
+                  هل تقدم خدمة العملاء صيانة منزلية؟
+                </h3>
+                <p className="text-lg">
+                  نعم، يمكن لفريق الدعم الفني زيارة منزلك لإجراء الصيانة
+                  اللازمة.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold">ما هي أوقات عمل خدمة العملاء؟</h3>
+                <p className="text-lg">
+                  خدمة العملاء متاحة على مدار الساعة لضمان تقديم الدعم الكامل.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </section>
       <main className="bg-gray-50 py-16 md:py-24">
         <Container maxWidth="lg">
           <Typography
