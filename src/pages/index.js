@@ -113,7 +113,10 @@ export default function MainComponent() {
         PhoneNmberTitle="رقم صيانة شارب"
         whatsAppTitle="هاتف صيانة شارب"
       />
-      <section className="w-full py-16 md:pt-10 md:pb-6 lg:pt-16 lg:pb-8 h-screen">
+      <section
+        title="صيانة أعطال شارب فى مصر"
+        className="w-full py-16 md:pt-10 md:pb-6 lg:pt-16 lg:pb-8 h-screen"
+      >
         <Container className="relative mx-auto h-full">
           <Box className="relative w-full h-full mx-auto aspect-video overflow-hidden rounded-xl lg:aspect-square bg-gray-400">
             <Image
@@ -163,7 +166,10 @@ export default function MainComponent() {
           </Box>
         </Container>
       </section>
-      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+      <section
+        title="خدمة عملاء شارب"
+        className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto"
+      >
         <Container className="grid max-w-7xl mx-auto gap-y-16 lg:grid-cols-2 lg:gap-x-8 lg:items-start my-3">
           <Box className="lg:pr-4">
             <Box className="lg:max-w-lg">
@@ -226,7 +232,31 @@ export default function MainComponent() {
           </Box>
         </Container>
       </section>
-      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+      <section
+        title="صيانة شارب"
+        className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto text-center"
+      >
+        <h1>صيانة شارب</h1>
+        <p>
+          تقوم شركة شارب العربي بعمل الصيانة المجانية لمدة خمس سنوات على
+          التكييفات بالكامل على الجهاز ضد عيوب الصناعة طول فترة الضمان وتشمل
+          الصيانة قطع الغيار في حال تلف أي من قطع غيار التكييف يتم تبديلها على
+          نفقة الشركة وتقوم الشركة بالتوصيل والتركيب مجاني ويقوم الفنيين
+          المدربين طرفنا على أعلى مستوى بعمل الصيانة اللازمة وإبلاغ الشركة بذلك
+          حين تتم وتتم الصيانة المجانية مرتين في العام مرة صيفاً ومرة شتاءاً
+          وتعمل شركة شارب العربي على إرضاء العملاء بشتى الطرق وتوفير جميع
+          احتياجاتهم من قطع غيار داخل الضمان وخارج الضمان ومن شروط الصيانة
+          المجانية أن يكون تم التركيب بمعرفة الشركة حيث أن لاضمان يسري من تاريخ
+          التركيب بمعرفة الفني المختص من الشركة ويتم اعتماد الضمان من قبل الفني
+          المختص أثناء التركيب ولا يجوز التركيب خارج الشركة حتى لا يسقط الضمان
+          ويضيع حق العميل فيما يتعلق بالخمس سنوات ضمان.متطلبات الإفصاح من الجهة
+          المنظمة للصناعة
+        </p>
+      </section>
+      <section
+        title="العربي الخط الساخن"
+        className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto"
+      >
         <h1 style={{ textAlign: "center" }}>
           <span style={{ color: "#ff0000" }}>
             <a style={{ color: "#ff0000" }} href={`tel:${phoneNumber}`}>
@@ -290,7 +320,10 @@ export default function MainComponent() {
           بكفر الزيات –
         </p>
       </section>
-      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+      <section
+        title="رقم صيانة شارب الخط الساخن"
+        className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto"
+      >
         <h1 style={{ textAlign: "center" }}>
           <span style={{ color: "#ff0000" }}>
             رقم صيانة شارب الخط الساخن{" "}
@@ -365,7 +398,10 @@ export default function MainComponent() {
         </p>
       </section>
       {/* Section To Target "خدمة عملاء شارب للغسالات" Keyword */}
-      <section className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto">
+      <section
+        title="ما هي خدمة عملاء شارب للغسالات؟"
+        className="bg-white shadow-lg rounded-lg p-8 mb-8 w-[90%] mx-auto"
+      >
         <header className="bg-blue-600 text-white py-4">
           <div className="container mx-auto text-center">
             <h1 className="text-3xl font-bold">خدمة عملاء شارب للغسالات</h1>
@@ -441,7 +477,10 @@ export default function MainComponent() {
           </section>
         </main>
       </section>
-      <main className="bg-gray-50 py-16 md:py-24">
+      <main
+        title="أفضل خدمات صيانة شارب في مصر"
+        className="bg-gray-50 py-16 md:py-24"
+      >
         <Container maxWidth="lg">
           <Typography
             variant="h1"
