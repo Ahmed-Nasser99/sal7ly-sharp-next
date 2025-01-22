@@ -634,6 +634,18 @@ export default function MainComponent() {
           </Box>
         </Container>
       </main>
+      <main title="صيانة شارب" className="bg-gray-50 py-16 md:py-24">
+        <div className="w-full flex items-center justify-center">
+          <div className="w-[300px] h-[300px]">
+            <Image
+              src="/assets/Imgs/Sharp/logoSharp.png"
+              alt="صيانة شارب"
+              layout="fill"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </main>
     </>
   );
 }
