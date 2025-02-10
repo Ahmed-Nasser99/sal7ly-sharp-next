@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import homeBackground from "../../public/assets/Imgs/appliancesGroupHomeBackground.png";
 import logo from "../../public/assets/Imgs/Logo.png";
 import {
@@ -17,6 +18,9 @@ import {
   List,
   ListItem,
   ListItemText,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
 import Link from "next/link";
 import {
@@ -43,7 +47,73 @@ const t = (key) => {
 export default function MainComponent() {
   const phoneNumber = "+201102941029";
   const displayPhoneNumber = "01102941029";
-
+  const faqs = [
+    {
+      question: "اطرح اسئلتك علي خدمة العملاء واعرف التفاصيل",
+      answer: (
+        <ul className="list-disc pl-5 text-lg text-gray-900 rtl:text-right">
+          <li>كيف يمكنني معرفة تكلفة صيانة جهازي؟</li>
+          <li>
+            عند التحدث مع احد ممثلي خدمة عملاء شارب العربى سيطلب منك بعض
+            التفاصيل الخاصة بالجهاز.
+          </li>
+          <li>
+            مثل نوع الجهاز، الموديل، مظاهر الخلل، وهل المنتج ما زال داخل ضمان
+            شارب العربى أم خارج مدة الضمان.
+          </li>
+          <li>
+            اذا كان لابد من الصيانة المنزلية سيتم تزويد العميل بكل الأسعار
+            والمكونات المطلوبة.
+          </li>
+        </ul>
+      ),
+    },
+    {
+      question: "كم يستغرق وقت الاصلاح بمنزلي؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          عادة ما يستغرق وقت صيانة الجهاز بين 40 إلى 150 دقيقة تقريباً، ولكن قد
+          تختلف المدة بناءً على عدة عوامل.
+        </Typography>
+      ),
+    },
+    {
+      question: "اعرف طرق التواصل مع صيانة شارب مصر؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          هناك العديد من طرق الاتصال بمراكز صيانة شارب المنتشرة في المدن
+          المختلفة، مثل الخط الساخن ورقم الواتساب.
+        </Typography>
+      ),
+    },
+    {
+      question: "ما هي مميزات خدمات صيانة شارب؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          تتميز خدمات صيانة شارب بالسرعة، الجودة، وتوفر قطع الغيار الأصلية،
+          بالإضافة إلى فريق دعم فني محترف.
+        </Typography>
+      ),
+    },
+    {
+      question: "كيف يمكنني حجز موعد صيانة لجهازي؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          يمكنك حجز موعد صيانة من خلال الاتصال بالخط الساخن، أو عبر موقعنا
+          الإلكتروني، أو من خلال تطبيق الهاتف المحمول.
+        </Typography>
+      ),
+    },
+    {
+      question: "هل توفر شارب ضمان بعد الصيانة؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          نعم، نوفر ضماناً على جميع عمليات الصيانة وقطع الغيار الأصلية
+          المستخدمة، لضمان راحة العملاء.
+        </Typography>
+      ),
+    },
+  ];
   return (
     <>
       {" "}
@@ -117,7 +187,7 @@ export default function MainComponent() {
         title="صيانة أعطال شارب فى مصر"
         className="w-full py-16 md:pt-10 md:pb-6 lg:pt-16 lg:pb-8 h-screen"
       >
-        <Container className="relative mx-auto h-full">
+        <Container className="relative max-w-full !w-[95%] mx-auto h-full">
           <Box className="relative w-full h-full mx-auto aspect-video overflow-hidden rounded-xl lg:aspect-square bg-gray-400">
             <Image
               src="/assets/Imgs/Sharp/sharpBg.jpg"
@@ -559,9 +629,9 @@ export default function MainComponent() {
       </section>
       <main
         title="أفضل خدمات صيانة شارب في مصر"
-        className="bg-gray-50 py-16 md:py-24"
+        className="bg-gray-50 py-16 md:py-24 max-w-[90%] mx-auto mb-8"
       >
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" className="max-w-[90%]">
           <Typography
             variant="h1"
             component="h1"
@@ -570,7 +640,7 @@ export default function MainComponent() {
             صيانة أعطال شارب فى مصر
           </Typography>
 
-          <Box className="bg-white shadow-lg rounded-lg p-8 mb-8">
+          <Box className="bg-white shadow-lg rounded-lg p-8 mb-8 ">
             <Typography variant="h2" className="text-2xl font-semibold mb-4">
               أفضل خدمات صيانة شارب في مصر
             </Typography>
@@ -581,7 +651,7 @@ export default function MainComponent() {
             </Typography>
           </Box>
 
-          <Box className="bg-white shadow-lg rounded-lg p-8 mb-8">
+          <Box className="bg-white shadow-lg rounded-lg p-8 mb-8 ">
             <Typography variant="h2" className="text-2xl font-semibold mb-4">
               خدماتنا
             </Typography>
@@ -607,7 +677,7 @@ export default function MainComponent() {
             </List>
           </Box>
 
-          <Box className="bg-white shadow-lg rounded-lg p-8">
+          <Box className="bg-white shadow-lg rounded-lg p-8 ">
             <Typography variant="h2" className="text-2xl font-semibold mb-4">
               تواصل معنا
             </Typography>
@@ -634,18 +704,98 @@ export default function MainComponent() {
           </Box>
         </Container>
       </main>
-      <main title="صيانة شارب" className="bg-gray-50 py-16 md:py-24">
-        <div className="w-full flex items-center justify-center">
-          <div className="w-[300px] h-[300px]">
-            <Image
-              src="/assets/Imgs/Sharp/logoSharp.png"
-              alt="صيانة شارب"
-              layout="fill"
-              className="object-cover"
-            />
-          </div>
+      <Container maxWidth="lg" className="mb-8 max-w-[90%] w-full mx-auto">
+        {/* Red Background Section */}
+        <Box className="bg-red-700 py-2">
+          <Typography
+            variant="h6"
+            className="text-center text-pink-100"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            مركز صيانة شارب لخدمة اصلاح الاجهزة
+          </Typography>
+        </Box>
+
+        {/* Gray Background Section */}
+        <Box className="bg-gray-100 py-4 text-center">
+          <Typography
+            variant="body1"
+            className="text-black text-lg"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            إذا كنت تواجه مشكلات تتعلق بأجهزة شارب الخاصة بك، يمكنك التواصل مع
+            الدعم الفني المتخصص لخدمة منتجات Sharp المتوفر على مدار اليوم
+            لخدمتك.
+          </Typography>
+          <Typography
+            variant="body1"
+            className="text-black text-lg"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            ابدأ مع{" "}
+            <Link
+              href="https://sharp-maintenance.vercel.app/"
+              className="text-blue-600"
+            >
+              صيانة شارب
+            </Link>{" "}
+            تجربة فريدة ومثالية لحماية منتج شارب ومنع الإصلاحات المكلفة.
+          </Typography>
+          <Typography
+            variant="body1"
+            className="text-black text-lg"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            نعمل دائماً لتنفيذ طلبات <strong>إصلاح شارب</strong> بالطرق الصحيحة
+            والفعالة، للوصول بالأداء المثالي المعروف عن منتجات شارب.
+          </Typography>
+          <Typography
+            variant="body1"
+            className="text-black text-lg"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            لدينا في مركز صيانة شارب أحدث معدات استكشاف الأعطال وتصحيح الأخطاء،
+            مما يتيح إصلاحها باحترافية وضمان استخدام المكونات الأصلية.
+          </Typography>
+          <Typography
+            variant="body1"
+            className="text-black text-lg"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            اطرح الأسئلة لموظفي خدمة العملاء أو اتصل على{" "}
+            <strong>رقم صيانة شارب الموحد</strong> 19319 للتعرف على المزايا
+            الإضافية.
+          </Typography>
+          <Typography
+            variant="body1"
+            className="text-black text-lg"
+            sx={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
+            نضمن حصول عملائنا على تجربة إصلاح مثالية تحافظ على جودة الأجهزة
+            الكهربائية وفق معايير الجودة العالمية لشركة شارب اليابانية.
+          </Typography>
+        </Box>
+      </Container>
+      <section
+        calssName="bg-white shadow-lg rounded-lg p-8 !my-8 !w-[90%] max-w-[90%] mx-auto mb-8"
+        name="faq"
+      >
+        <div className="p-4 w-full bg-white rounded-lg shadow-lg rtl max-w-[90%] mx-auto">
+          {faqs.map((faq, index) => (
+            <Accordion key={index} className="shadow-sm w-full">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                className="bg-gray-200"
+              >
+                <Typography className="font-semibold text-gray-800 rtl:text-right">
+                  {faq.question}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>{faq.answer}</AccordionDetails>
+            </Accordion>
+          ))}
         </div>
-      </main>
+      </section>
     </>
   );
 }
