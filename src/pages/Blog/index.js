@@ -1,15 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import {
-  LocalPhone as LocalPhoneIcon,
-  Container,
-  Typography,
-  Box,
-  Button,
-} from "@mui/material";
+import { Container, Typography, Box, Button } from "@mui/material";
+import { LocalPhone as LocalPhoneIcon, WhatsApp } from "@mui/icons-material";
 import Image from "next/image";
-import { WhatsApp } from "@mui/icons-material";
+import arValues from "../../../public/locales/ar/translation.json";
 
 const blogPosts = [
   {
@@ -42,6 +37,9 @@ const blogPosts = [
   },
 ];
 
+const t = (key) => {
+  return arValues[key] || key; // Return the Arabic value or the key if not found
+};
 export default function BlogPost() {
   //   const router = useRouter();
   //   const { slug } = router.query;
@@ -51,6 +49,8 @@ export default function BlogPost() {
   //     return <div>Post not found</div>;
   //   }
 
+  const phoneNumber = "+201102941029";
+  const displayPhoneNumber = "01102941029";
   return (
     <>
       <section
