@@ -1,7 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Container, Typography, Box } from "@mui/material";
+import {
+  LocalPhone as LocalPhoneIcon,
+  Container,
+  Typography,
+  Box,
+  Button,
+} from "@mui/material";
+import Image from "next/image";
+import { WhatsApp } from "@mui/icons-material";
 
 const blogPosts = [
   {
@@ -45,6 +53,59 @@ export default function BlogPost() {
 
   return (
     <>
+      <section
+        title="صيانة أعطال شارب فى مصر"
+        className="w-full py-16 md:pt-10 md:pb-6 lg:pt-16 lg:pb-8 h-screen"
+      >
+        <Container className="relative max-w-full !w-[95%] mx-auto h-full">
+          <Box className="relative w-full h-full mx-auto aspect-video overflow-hidden rounded-xl lg:aspect-square bg-gray-400">
+            <Image
+              src="/assets/Imgs/Sharp/sharpBg.jpg"
+              alt="صيانة شارب"
+              layout="fill"
+              className="object-cover"
+            />
+            <Box className="absolute inset-0 bg-[#0003]" />
+          </Box>
+
+          <Box className="absolute inset-0 flex flex-col items-center justify-center text-center text-white space-y-4">
+            <Typography
+              variant="h1"
+              className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl"
+              style={{ letterSpacing: "2px" }}
+            >
+              صيانة أعطال شارب فى مصر
+            </Typography>
+            <Typography
+              variant="body1"
+              className="text-muted-foreground md:text-xl"
+            >
+              نقدم خدمات صيانة متميزة لجميع أجهزة شارب، بما في ذلك الثلاجات
+              والتكييفات والغسالات. فريقنا من الخبراء مستعد لحل جميع مشاكل
+              أجهزتكم بكفاءة عالية.
+            </Typography>
+            <Box className="flex flex-col justify-center gap-2 sm:flex-row">
+              <Button
+                variant="contained"
+                color="success"
+                startIcon={<LocalPhoneIcon />}
+                component="a"
+                href={`tel:${phoneNumber}`}
+              >
+                {t("call_us")}
+              </Button>
+              <Button
+                variant="outlined"
+                startIcon={<WhatsApp className="text-green-500" />}
+                component="a"
+                href={`https://wa.me/${phoneNumber}`}
+              >
+                {t("whatsapp")}
+              </Button>
+            </Box>
+          </Box>
+        </Container>
+      </section>
       <Container maxWidth="lg" className="py-12">
         {blogPosts?.map((post) => (
           <>
