@@ -118,7 +118,8 @@ export default function MainComponent() {
     <>
       {" "}
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <link
           rel="icon"
           type="image/svg+xml"
@@ -131,7 +132,6 @@ export default function MainComponent() {
           content="-PvRBDpzOv6C3TyToejrkmpSg-q6TN2J8yo7ofEE2A0"
         />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="Arabic" />
         <title>صيانة شارب - خدمات الصيانة الموثوقة لأجهزة شارب في مصر</title>
         <meta
@@ -176,6 +176,49 @@ export default function MainComponent() {
         />
         <meta property="og:image" content="/assets/Imgs/Sharp/logoSharp.png" />
         <meta property="og:site_name" content="صيانة شارب" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "صيانة شارب العربى",
+              image: "/assets/Imgs/Sharp/logoSharp.png",
+              "@id": "https://sharp-maintenance.vercel.app/",
+              url: "https://sharp-maintenance.vercel.app/",
+              telephone: "+201102941029",
+              priceRange: "$$",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "شارع التحرير",
+                addressLocality: "القاهرة",
+                addressRegion: "القاهرة",
+                postalCode: "11511",
+                addressCountry: "EG",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 30.0444,
+                longitude: 31.2357,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday",
+                ],
+                opens: "00:00",
+                closes: "23:59",
+              },
+            }),
+          }}
+        />
       </Head>
       <Navbar
         logo="/assets/Imgs/Sharp/logoSharp.png"
