@@ -1,73 +1,50 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { Container, Typography, Box, Button } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardContent,
+  Tabs,
+  Tab,
+} from "@mui/material";
 import { LocalPhone as LocalPhoneIcon, WhatsApp } from "@mui/icons-material";
+import { tabsClasses } from "@mui/material/Tabs";
 import Image from "next/image";
 import arValues from "../../../public/locales/ar/translation.json";
 const blogPosts = [
   {
     slug: "sharp-washing-machine-maintenance",
-    title: "دليل صيانة غسالات شارب الشامل: حلول مبتكرة ونصائح خبراء",
+    title: "صيانة غسالات شارب: دليل شامل للحفاظ على غسالتك",
     content: `
-      <section class="intro">
-        <img src="/assets/Imgs/Sharp/washing-machine-diagram.jpg" alt="مخطط غسالة شارب مع أجزاء رئيسية" class="float-right">
-        <p>تُعتبر غسالات شارب من الأجهزة المنزلية عالية الكفاءة، ولكنها تحتاج لصيانة دورية لتجنب 73% من الأعطال الشائعة حسب إحصاءات مراكز الصيانة المعتمدة.</p>
-      </section>
-
-      <h2>الأسرار الخفية لطول عمر الغسالة</h2>
-      <div class="video-embed">
-        <iframe src="https://youtube.com/embed/example" title="فيديو صيانة غسالات شارب"></iframe>
-      </div>
-
-      <h3>جدول صيانة ربع سنوي</h3>
-      <table class="maintenance-schedule">
-        <tr><th>المهمة</th><th>الطريقة</th><th>الأدوات</th></tr>
-        <tr><td>تنظيف الخرطوم</td><td>استخدم فرشاة ناعمة مع خل التفاح</td><td>قفازات مطاطية</td></tr>
-        <tr><td>فحص المحرك</td><td>قياس الاهتزازات بجهاز قياس خاص</td><td>Vibration meter</td></tr>
-      </table>
-
-      <h3>أعطال نموذج NE-FD810PS-W</h3>
-      <div class="comparison-chart">
-        <div class="issue">
-          <h4>كود الخطأ E3</h4>
-          <p>الحل: إعادة ضبط مستشعر الحمل الزائد</p>
-          <button class="cta-button" onclick="showModal('scheduleForm')">احجز فحصًا فنيًا</button>
-        </div>
-      </div>
-
-      <section class="expert-tip">
-        <h2>نصيحة الخبير</h2>
-        <p>"الغسيل عند 40°C يوفر 35% من الطاقة مقارنة بـ 60°C" - مهندس صيانة معتمد</p>
-      </section>
-
-      <div class="faq-section">
-        <h3>الأسئلة الشائعة</h3>
-        <details>
-          <summary>كم مرة يحتاج الفلتر للتنظيف؟</summary>
-          <p>كل 30 دورة غسيل مع استخدام منقي ماء</p>
-        </details>
-      </div>
-
-      <div class="related-posts">
-        <a href="/blog/sharp-warranty-policies">سياسة الضمان الرسمية من شارب</a>
-        <a href="/blog/energy-saving-tips">توفير 40% في فواتير الكهرباء</a>
-      </div>
+      <p>صيانة غسالات شارب تتطلب اتباع بعض النصائح البسيطة لتجنب الأعطال الشائعة. في هذه المقالة، سنقدم لك دليلًا شاملًا للحفاظ على غسالتك.</p>
+      <h2>نصائح لصيانة غسالات شارب</h2>
+      <ul>
+        <li>تجنب زيادة الحمولة عن الحد المسموح.</li>
+        <li>تنظيف الفلتر بانتظام.</li>
+        <li>استخدام المنظفات المناسبة.</li>
+      </ul>
     `,
-    image: "/assets/Imgs/Sharp/sharp-washing-machine-3d.jpg",
-    metaDescription:
-      "اكتشف أسرار صيانة غسالات شارب الدقيقة مع جداول زمنية مفصلة وفيديوهات إرشادية من خبراء معتمدين. حلول فورية لأعطال E3 وأخطاء التشغيل الشائعة.",
-    structuredData: {
-      "@type": "HowTo",
-      name: "صيانة غسالة شارب",
-      step: [
-        {
-          name: "تنظيف الفلتر",
-          text: "افك الجزء السفلي باستخدام مفك نجمي",
-          image: "/assets/Imgs/Sharp/filter-cleaning.jpg",
-        },
-      ],
-    },
+    image: "/assets/Imgs/Sharp/sharpBg.jpg",
+  },
+  {
+    slug: "sharp-refrigerator-maintenance",
+    title: "صيانة ثلاجات شارب: كيفية حل الأعطال الشائعة",
+    content: `
+      <p>صيانة ثلاجات شارب تساعد في الحفاظ على أدائها المثالي. تعرف على كيفية حل الأعطال الشائعة في هذه المقالة.</p>
+      <h2>أعطال شائعة في ثلاجات شارب</h2>
+      <ul>
+        <li>تسريب الماء.</li>
+        <li>ارتفاع درجة الحرارة.</li>
+        <li>ضوضاء غير طبيعية.</li>
+      </ul>
+    `,
+    image: "/assets/Imgs/Sharp/sharpBg.jpg",
   },
 ];
 
@@ -140,23 +117,62 @@ export default function BlogPost() {
           </Box>
         </Container>
       </section>
+      {/* <Box
+        sx={{
+          flexGrow: 1,
+          bgcolor: "background.paper",
+        }}
+      >
+        <Tabs
+          variant="scrollable"
+          scrollButtons
+          aria-label="visible arrows tabs example"
+          sx={{
+            [`& .${tabsClasses.scrollButtons}`]: {
+              "&.Mui-disabled": { opacity: 0.3 },
+            },
+          }}
+        >
+          <Tab label="Item One" />
+          <Tab label="Item Two" />
+          <Tab label="Item Three" />
+          <Tab label="Item Four" />
+          <Tab label="Item Five" />
+          <Tab label="Item Six" />
+          <Tab label="Item Seven" />
+        </Tabs>
+      </Box> */}
       <Container maxWidth="lg" className="py-12">
-        {blogPosts?.map((post) => (
-          <>
-            <Typography variant="h1" className="text-4xl font-bold mb-8">
-              {post?.title}
-            </Typography>
-            <img
-              src={post?.image}
-              alt={post?.title}
-              className="w-full h-64 object-cover rounded-lg mb-8"
-            />
-            <Box
-              className="prose prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: post?.content }}
-            />
-          </>
-        ))}
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          {blogPosts?.map((post) => (
+            <>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={post?.image}
+                    alt={post?.title}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {post?.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      <Box
+                        className="prose prose-lg max-w-none"
+                        dangerouslySetInnerHTML={{ __html: post?.content }}
+                      />
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </>
+          ))}
+        </div>
       </Container>
     </>
   );
