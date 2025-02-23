@@ -113,6 +113,74 @@ export default function MainComponent() {
         </Typography>
       ),
     },
+    {
+      question: "كم سنة ضمان ثلاجة شارب؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          تضمن شركة شارب ضمانًا لمدة 5 سنوات على الثلاجات تشمل:
+          <ul className="list-disc pr-5 mt-2">
+            <li>ضمان 2 سنوات على جميع الأجزاء</li>
+            <li>ضمان 5 سنوات على الضاغط (الكومبرسور)</li>
+            <li>ضمان 10 سنوات على المبخر الداخلي</li>
+          </ul>
+        </Typography>
+      ),
+    },
+    {
+      question: "خدمة ما بعد البيع شارب؟",
+      answer: (
+        <div className="text-lg text-gray-900 rtl:text-right">
+          <Typography paragraph>
+            تقدم شارب حزمة خدمات مميزة ما بعد البيع تشمل:
+          </Typography>
+          <ul className="list-disc pr-5 space-y-2">
+            <li>صيانة منزلية مجانية خلال فترة الضمان</li>
+            <li>دعم فني على مدار الساعة عبر الرقم 19319</li>
+            <li>توفير قطع غيار أصلية لمدة 10 سنوات بعد التوقف عن الإنتاج</li>
+            <li>خدمة إصلاح عاجلة خلال 24 ساعة في القاهرة الكبرى</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      question: "من هو صاحب شركة شارب؟",
+      answer: (
+        <Typography className="text-lg text-gray-900 rtl:text-right">
+          <strong>تأسست شركة شارب:</strong>
+          <br />
+          - المؤسس: توكوجي هاياكاوا (1912)
+          <br />
+          - المالك الحالي: مجموعة فوكسكون التايوانية (منذ 2016)
+          <br />- المقر الرئيسي: أوساكا، اليابان
+        </Typography>
+      ),
+    },
+    {
+      question: "ثلاجة شارب توكيل ايه؟",
+      answer: (
+        <div className="text-lg text-gray-900 rtl:text-right">
+          <Typography paragraph>
+            يمكنك التعرف على مراكز الصيانة المعتمدة عبر:
+          </Typography>
+          <ul className="list-disc pr-5 space-y-2">
+            <li>
+              الموقع الرسمي:
+              <a
+                href="https://www.sharp-egypt.com"
+                className="text-blue-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                sharp-egypt.com
+              </a>
+            </li>
+            <li>الخط الساخن الموحد: 19319</li>
+            <li>تطبيق شارب مصر للهواتف الذكية</li>
+            <li>المراكز المعتمدة في مولات كارفور وهايبر وان</li>
+          </ul>
+        </div>
+      ),
+    },
   ];
   return (
     <>
