@@ -738,6 +738,41 @@ export default function MainComponent() {
           </section>
         </main>
       </section>
+      <section className="bg-gray-50 py-16 md:py-24 max-w-[90%] mx-auto mb-8">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl font-bold text-center">
+            صيانة شارب مركز الخدمة الرقم الموحد 19319
+          </h1>
+          <h2 className="text-xl font-bold">
+            مركز صيانة شارب لخدمة اصلاح الاجهزة
+          </h2>
+          <p className="text-lg text-center text-gray-800 mb-4">
+            إذا كنت تواجه مشكلات تتعلق باجهزة شارب الخاصة بك بأمكانك التواصل مع
+            الدعم الفني المتخصص لخدمة منتجات Sharp المتوفر . علي مدار اليوم
+            لخدمتك
+          </p>
+          <div className="bg-red-700 text-white py-4 text-center">
+            <h3 className="text-lg font-bold">
+              احصل على قطع الغيار الاصلية لجهازك
+            </h3>
+          </div>
+          <div className="mt-4">
+            <p className="text-gray-800">
+              نظراً لكوننا الفرع الرئيسي لاصلاح شارب مصر معروفون باهتمامنا
+              الحقيقي بالاجهزة الذكية شارب وذلك بتوفير كافة الامتيازات لعملائنا.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold text-blue-800 mb-4">
+              توكيل شارب ضمان الصيانة
+            </h3>
+            <p>
+              ضمان شارب يبدء بعد اتمام صيانه المنتج شامل ذلك المرور الدوري كل 3
+              اشهر للفحص الوقائي من قبل مهندسين توكيل شارب مصر.
+            </p>
+          </div>
+        </div>
+      </section>
       <main
         title="أفضل خدمات صيانة شارب في مصر"
         className="bg-gray-50 py-16 md:py-24 max-w-[90%] mx-auto mb-8"
